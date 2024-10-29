@@ -16,7 +16,7 @@ def index():
 def search():
     model = genai.GenerativeModel('gemini-1.0-pro-latest')
     genai.configure(api_key=os.getenv('API'))
-    context = 'Responda como alguem que sabe tudo'
+    context = 'Responda como um monge, que sabe o destino do mundo'
     prompt = request.args.get('prompt')
     input_ia = f'{context}: {prompt}'
     output = model.generate_content(input_ia)
